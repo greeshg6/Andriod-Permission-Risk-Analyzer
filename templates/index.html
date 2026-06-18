@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Android Permission Risk Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="page-shell">
+        <header class="hero">
+            <div class="hero-copy">
+                <span class="eyebrow">Permission privacy intelligence</span>
+                <h1>Android Permission Risk Analyzer</h1>
+                <p>Analyze app permissions, uncover risk, and understand privacy exposure in seconds.</p>
+            </div>
+        </header>
+
+        <main class="main-layout">
+            <section class="search-card card">
+                <div class="search-header">
+                    <h2>Search an app</h2>
+                    <p>Enter an app name to view permission details, package information, and a visual risk rating.</p>
+                </div>
+
+                        <div class="search-group">
+                    <input type="text" id="appInput" placeholder="Search app name" autocomplete="off" aria-label="App name">
+                    <button type="button" onclick="searchApp()">Analyze</button>
+                </div>
+                <p class="help-text">You can search by app name; the analyzer will display permission risks and package details.</p>
+                <div id="result" class="result-panel" role="status"></div>
+            </section>
+
+            <section class="benefits-grid">
+                <article class="info-card">
+                    <h3>Clear insights</h3>
+                    <p>View app permissions with a concise risk score and categorized permission breakdown.</p>
+                </article>
+                <article class="info-card">
+                    <h3>Fast analysis</h3>
+                    <p>Search quickly and get instant feedback on privacy-sensitive permissions and data access.</p>
+                </article>
+                <article class="info-card">
+                    <h3>Privacy-first</h3>
+                    <p>Designed to help you choose apps with better permission hygiene and lower security risk.</p>
+                </article>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>Simple privacy screening for Android apps, with clear permission risk guidance.</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
